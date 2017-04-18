@@ -1,0 +1,113 @@
+ Bypassing HTTP Strict Transport Security 
+
+bypassing ssl
+client -> attacker - self signed certificate
+pki compromise
+coletion in the significant
+beast/crime
+breach
+heart bleed
+stripping ssl atacks
+rewritte https to http
+
+http strict transport security
+hsts - prevent user from using http
+prevent user from accept self-signed certificates
+nobody uses
+client -https- server
+return header with max-age
+when he enter http -> https
+
+https://www.instantssl.com
+
+Hyper Text Transfer Protocol Secure (HTTPS) is the secure version of HTTP, the protocol over which data is sent between your browser and the website that you are connected to. The 'S' at the end of HTTPS stands for 'Secure'. It means all communications between your browser and the website are encrypted. HTTPS is often used to protect highly confidential online transactions like online banking and online shopping order forms.
+
+Web browsers such as Internet Explorer, Firefox and Chrome also display a padlock icon in the address bar to visually indicate that a HTTPS connection is in effect. 
+
+HTTPS pages typically use one of two secure protocols to encrypt communications - SSL (Secure Sockets Layer) or TLS (Transport Layer Security). Both the TLS and SSL protocols use what is known as an 'asymmetric' Public Key Infrastructure (PKI) system. An asymmetric system uses two 'keys' to encrypt communications, a 'public' key and a 'private' key. Anything encrypted with the public key can only be decrypted by the private key and vice-versa.
+
+As the names suggest, the 'private' key should be kept strictly protected and should only be accessible the owner of the private key. In the case of a website, the private key remains securely ensconced on the web server. Conversely, the public key is intended to be distributed to anybody and everybody that needs to be able to decrypt information that was encrypted with the private key.
+
+When you request a HTTPS connection to a webpage, the website will initially send its SSL certificate to your browser. This certificate contains the public key needed to begin the secure session. Based on this initial exchange, your browser and the website then initiate the 'SSL handshake'. The SSL handshake involves the generation of shared secrets to establish a uniquely secure connection between yourself and the website.
+
+When a trusted SSL Digital Certificate is used during a HTTPS connection, users will see a padlock icon in the browser address bar. When an Extended Validation Certificate is installed on a web site, the address bar will turn green.
+
+All communications sent over regular HTTP connections are in 'plain text' and can be read by any hacker that manages to break into the connection between your browser and the website. This presents a clear danger if the 'communication' is on an order form and includes your credit card details or social security number. With a HTTPS connection, all communications are securely encrypted. This means that even if somebody managed to break into the connection, they would not be able decrypt any of the data which passes between you and the website.
+
+The major benefits of a HTTPS certificate are:
+
+    Customer information, like credit card numbers, is encrypted and cannot be intercepted
+    Visitors can verify you are a registered business and that you own the domain
+    Customers are more likely to trust and complete purchases from sites that use HTTPS
+
+HTTPS as a security risk for companies
+
+Conventional firewalls do not recognize encrypted malcode as a threat. Malware programmers take advantage of this to spread their malicious code.
+In principle, communication via the encrypted HTTPS protocol (Hypertext Transfer Protocol Secure) increases security. Almost all banks and many online shops use this form of encryption for the secure exchange of sensitive data, such as in online banking or shopping. Websites such as Google, Facebook or Twitter are also increasingly relying on HTTPS encryption to ensure greater security.
+
+But HTTPS has a drawback: encrypted traffic can be a threat, in particular for companies – even when it is implemented correctly.
+
+The problem is that many conventional firewalls do not recognize encrypted malware for what it is, and therefore let it enter company networks unchallenged. More and more malware programmers are taking advantage of this situation to spread malicious code unnoticed.
+
+The HTTPS protocol was developed by Netscape in 1994. It is meant to guarantee integrity and trust in communication between web servers and browsers, and achieves this using encryption and authentication to prevent the notorious man-in-the-middle attacks.
+
+The additional data encryption takes place via SSL/TLS, continuously from server to client, which then decrypts the data again. SSL stands for Secure Sockets Layer. TLS is the successor to SSL, and stands for Transport Layer Security.
+
+According to a recent study by Dell, encrypted internet traffic is growing rapidly with SSL and TLS. It more than doubled in 2014 – from 182 billion connections to 437 billion. In October 2014, 32.8 percent of the 150,000 most popular websites were HTTPS encrypted. And the trend is upward.
+
+Almost none of this traffic is scanned for hidden malware. This means that one-third of all data traffic represents a potential entry point for malware directly into the company network.
+A study by NSS Labs points out:
+
+    "It is ironic that the rising use of SSL, which is meant to make our online lives safer, is making corporate networks less secure by creating blind spots for the security infrastructure."
+
+To close the security vulnerabilities created by HTTPS, a Next-Generation Firewall (NGFW) is needed. Only systems that are able to conduct a comprehensive SSL inspection, in order to examine encrypted communications for malware, are protected.
+
+A Next-Generation Firewall combines a conventional firewall with a number of other functions and network devices, including an application firewall, deep packet inspection and an intrusion prevention system, as well as SSH and SSL inspection.
+
+In order to inspect HTTPS network traffic, the firewall must analyze the data in cleartext. Therefore, encrypted data is first decrypted, then analyzed, and finally reencrypted and sent to the target computer. The firewall thus works between the server and the client, just like a man in the middle. It is certificates that enable this inline decryption. When the firewall acts, the browser no longer sees the original server certificate, but a version signed by the firewall, which it acknowledges with a warning.
+
+Only with a trustworthy CA certificate does the browser accept the interruption of the encrypted data flow by the firewall without issue. CA stands for Certificate Authority. Digital CA certificates are issued by authorized certification authorities. A list of trustworthy CA certificates is hardcoded into the browser, which means it cannot be modified by the user. The distribution and installation of certificates on all clients in the company is the responsibility of the admin.
+
+It is generally advisable to define a whitelist which bypasses SSL inspection for certain applications such as bank transactions. The admin should also keep an eye on the performance of the security solution in the company IT. SSL inspection leads to a certain latency, because data must be decrypted, analyzed and reencrypted.
+
+
+In the early days of the Internet, the World Wide Web consisted only of web
+sites. These were essentially information repositories containing static docu-
+ments. Web browsers were invented as a means of retrieving and displaying
+those documents, as shown in Figure 1-1. The fl ow of interesting information
+was one-way, from server to browser. Most sites did not authenticate users,
+because there was no need to. Each user was treated in the same way and was
+presented with the same information. Any security threats arising from host-
+ing a website were related largely to vulnerabilities in web server software (of
+which there were many). If an attacker compromised a web server, he usually
+would not gain access to any sensitive information, because the information
+held on the server was already open to public view. Rather, an attacker typically
+would modify the fi les on the server to deface the web site’s contents or use the
+server’s storage and bandwidth to distribute “warez.”
+
+Today, the World Wide Web is almost unrecognizable from its earlier form.
+The majority of sites on the web are in fact applications (see Figure 1-2). They
+are highly functional and rely on two-way fl ow of information between the
+server and browser. They support registration and login, fi nancial transactions,
+search, and the authoring of content by users. The content presented to users
+is generated dynamically on the fl y and is often tailored to each specifi c user.
+Much of the information processed is private and highly sensitive. Security,
+therefore, is a big issue. No one wants to use a web application if he believes
+his information will be disclosed to unauthorized parties.
+
+HTTP, the core communications protocol used to access the World Wide
+Web, is lightweight and connectionless. This provides resilience in the
+event of communication errors and avoids the need for the server to
+hold open a network connection to every user, as was the case in many
+legacy client/server applications. HTTP can also be proxied and tunneled
+over other protocols, allowing for secure communication in any network
+confi guration.
+
+Users are often urged to verify the site’s certifi cate, admire the advanced
+cryptographic protocols in use, and, on this basis, trust it with their personal
+information.
+
+
+
+
+
