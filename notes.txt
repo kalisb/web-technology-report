@@ -108,6 +108,54 @@ cryptographic protocols in use, and, on this basis, trust it with their personal
 information.
 
 
+https://www.lifewire.com/hypertext-transfer-protocol-817944
 
+HTTP (Hypertext Transfer Protocol) provides a network protocol standard that Web browsers and servers use to communicate.
+History of HTTP
+
+Tim Berners-Lee created the initial HTTP in the early 1990s as part of his work in defining the original World Wide Web.  
+Three primary versions were widely deployed during the 1990s
+
+    HTTP 0.9 (for support of basic hypertext documents)
+    HTTP 1.0 (extensions to support rich Web sites and scalability)
+
+    HTTP 1.1 (developed to address performance limitations of HTTP 1.0, specified in Internet RFC 2068)
+
+The latest version - HTTP 2.0 - became an approved standard in 2015. It maintains backward compatibility with HTTP 1.1 but offers additional performance enhancements.
+
+While standard HTTP does not encrypt traffic sent over a network, the HTTPS standard was developed to add encryption to HTTP via the use of 
+(originally) Secure Sockets Layer (SSL) or (later) Transport Layer Security (TLS).
+How HTTP Works
+
+HTTP is an application layer protocol built on top of TCP that uses a client-server communication model. HTTP clients (such as Web browsers) and
+Web servers communicate via HTTP request and response messages. The three main HTTP message types are GET, POST, and HEAD.
+
+HTTP GET messages sent to a Web server contain only an URL. Zero or more optional data parameters may be appended to the end of the URL.
+
+ The HTTP server processes the optional data portion of the URL if present and returns the result (a Web page or element of a Web page) to the browser.
+
+HTTP POST messages place any optional data parameters in the body of the request message rather than adding them to the end of the URL.
+
+HTTP HEAD request works the same as GET requests.
+
+Instead of replying with the full contents of the URL, the Web server sends back only the Web page header information (contained inside the HTML <HEAD> section).
+
+The browser initiates communication with an HTTP server by initiating a TCP connection to the server. Web browsing sessions use server port 80
+by default although other ports such as 8080 are sometimes used instead.
+
+Once a session is established, users of Web browsers trigger the sending and receiving of HTTP messages by visiting Web pages that have
+HTTP (or HTTPS) URLs. More - Web Searching Using HTTP and HTTPS.
+Issues with HTTP
+
+Messages transmitted over HTTP can fail to be delivered successfully for several reasons:
+
+    user error
+    malfunction of the Web browser
+    malfunction of  the Web server
+    errors in the creation of Web pages
+    temporary Internet network glitches
+
+When these failures occur, the protocol captures the cause of the failure (if possible) and reports an error code back to the browser. 
+Error 404 ("Page not found"), for example, became famous in the early days of the Internet when issues with Web pages and navigation were more common.
 
 
