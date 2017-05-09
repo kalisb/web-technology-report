@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+.img-with-text {
+    text-align:center;
+}
+
 html, body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -105,7 +109,7 @@ html, body {
 article.full .content-body {
   width: 650px;
   padding-bottom: 30px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 article.full .content-body.full-width {
@@ -312,6 +316,23 @@ article img.emoji {
   border: none;
 }
 
+blockquote {
+  font: 14px/20px italic Times, serif;
+  padding: 8px;
+  background-color: #faebbc;
+  border-top: 1px solid #e1cc89;
+  border-bottom: 1px solid #e1cc89;
+  margin: 5px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  text-indent: 23px;
+  }
+  blockquote span {
+     display: block;
+     background-repeat: no-repeat;
+     background-position: bottom right;
+   }
+
 footer {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -447,4 +468,3 @@ ol.toc>li a.active {
     font-size: 12px;
   }
 }
-
